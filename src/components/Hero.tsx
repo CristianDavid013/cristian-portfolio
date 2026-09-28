@@ -1,0 +1,4 @@
+export default function Hero({ availability, title, lead, actions }: { availability: string; title: string; lead: string; actions: { experience: string; contact: string } }) {
+  const [first, second] = title.split('. ');
+  return <section id="top" className="hero"><div className="hero-copy"><p className="eyebrow"><span />{availability}</p><h1>{first}. <em>{second}</em></h1><p className="hero-lead">{lead}</p><div className="hero-actions"><a className="button main" href="#experience">{actions.experience}<span>↘</span></a><a className="button quiet" href="#contact">{actions.contact}</a></div></div><aside className="signal-card"><div className="signal-top"><span className="pulse" />REMOTE READY</div><div className="rule" /><dl><div><dt>LANGUAGES</dt><dd>04</dd></div><div><dt>REMOTE EXPERIENCE</dt><dd>05+ YRS</dd></div><div><dt>FOCUS</dt><dd>TECH · PEOPLE</dd></div></dl></aside><div className="hero-index">01 <span>/</span> PROFESSIONAL PRESENTATION</div></section>;
+}
